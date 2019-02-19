@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<meta charset="{{configuration param="charset"}}">
+<meta name="keywords" content="{{configuration param="meta_keywords"}}">
+<meta name="description" content="{{configuration param="meta_description"}}">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{configuration param="wakka_name"}} : {{currentpage}}</title>
+{{linkstyle}}
+{{linkrss}}
+
+<body>
+  <header>
+    <a id="logoLink" href="./index.php">
+      <img id="logo" src="themes/relation-homme-animal/images/anicare-logo-white.svg" alt="Anicare">
+    </a>
+    <section id="headerColloque">
+      <h1>La relation homme-animal au XXIe siècle</h1>
+      <p>Quelles pratiques de formation pour quelle éthique de production ?</p>
+      <h2>Colloque</h2>
+      <p>8, 9, 10 juillet 2019, Institut d'éducation à l'agro-environnement de Florac</p>
+      <a href="?Inscriptions">Je m'inscris !</a>
+    </section>
+
+  </header>
+
+  <section id="main">
+    <article id="description" class="mainPage" role="main" {{doubleclic}}>
+      {WIKINI_PAGE}
+    </article>
+
+    <article id="day1">
+      {{include page="jour1" doubleclic="1"}}
+    </article>
+
+    <article id="day2">
+      {{include page="jour2" doubleclic="1"}}
+    </article>
+    
+    <article id="day3">
+      {{include page="jour3" doubleclic="1"}}
+    </article>
+  </section>
+
+  <footer>
+    {{include page="PageFooter" doubleclic="1"}}
+  </footer>
+  {{linkjavascript}}
+</body>

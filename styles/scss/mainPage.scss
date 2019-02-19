@@ -1,0 +1,107 @@
+#day1, #day2, #day3, #partners, #description {
+  display: grid;
+  grid-template-columns: auto minmax(min-content, $textWidth) auto;
+  grid-template-rows: auto;
+  padding-bottom: 1em;
+  min-height: calc(#{$textMinHeight} - 1em);
+
+  div.include {
+    margin: 1em;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    .span6 {
+      padding-left: 1em;
+    }
+  }
+}
+
+#description {
+  background-color: $mainYellow;
+  padding-bottom: 0;
+
+  div.page {
+    margin: 0 1em;
+    align-self: center;
+    justify-self: center;
+    grid-column-start: 2;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 1;
+    color: $mainBlack;
+    font-size: 1.2em;
+
+    .span6 {
+      img {
+        max-width: 360px;
+        height: auto;
+      }
+    }
+  }
+}
+
+#day3, #day2 {
+  border-top: 1px $mainBlack solid;
+}
+
+
+#partners {
+  background: $mainBlack;
+
+  div.include {
+    margin: auto;
+    height: 100%;
+
+    ul {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: center;
+
+      li {
+        list-style-type: none;
+        max-width: 9em;
+        max-height: 9em;
+        height: auto;
+        width: 9em;
+        margin: 0.5em;
+
+        figure {
+          width: 100%;
+          height: 100%;
+          margin: 0 !important;
+
+          a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 992px) {
+
+  /* Centre le texte de la description sur petit écran. */
+  #description .row-fluid :nth-child(1) {
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  #day1, #day2, #day3 {
+    h1, h2 {
+      text-align: center;
+    }
+  }
+  
+
+}
+

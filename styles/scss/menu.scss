@@ -1,0 +1,179 @@
+#menuToggle {
+  display: block;
+  position: relative;
+  top: 1em;
+  right: 1em;
+  z-index: 1;
+  user-select: none;
+
+  input {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+
+    cursor: pointer;
+
+    opacity: 0; // Cacher
+    z-index: 2; // et placer devant le bouton du menu
+  }
+
+  // Le menu de chez McDo
+  span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+
+    background: #cdcdcd;
+    border-radius: 3px;
+
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
+  }
+
+  span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  // Transforme le burger en croix
+  input:checked ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #232323;
+  }
+
+  input:checked ~ span:nth-last-child(2)
+  {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  // Cache la barre du milieu du burger
+  input:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  // Fait apparaitre le menu au click
+  input:checked ~ div.include ul {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  div.include {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+
+    ul {
+      display: none;
+      position: absolute;
+      padding: 0;
+      margin-left: 55px;
+      margin-top: -20px;
+      padding-top: 3em;
+
+      min-height: 100vh;
+      width: 100vw;
+
+
+      background: $mainBlue;
+      color: white;
+
+      list-style-type: none;
+      -webkit-font-smoothing: antialiased;
+      /* to stop flickering of text in safari */
+
+      transform-origin: 0% 0%;
+      transform: translate(-100%, 0);
+
+      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+
+      li {
+        padding: 0.2em 0;
+        font-size: 1.2em;
+        text-align: center;
+      }
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
+
+      a:hover {
+        color: $mainBlue;
+        background: white;
+      }
+
+    }
+  }
+}
+
+#menu {
+  background: $mainPurple;
+  width: 100%;
+
+  ul {
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    list-style-type: none;
+    flex-flow: row;
+    max-width: $textWidth;
+    margin: auto;
+
+  }
+
+  li {
+    padding: 0.5em 1em;
+  }
+
+  img.picto {
+    max-height: 1.5em;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+@media (min-width: 640px) {
+  #menuToggle {
+    position: inherit;
+
+    span {
+      display: none;
+    }
+
+    input {
+      display: none;
+    }
+
+    div.include {
+      position: relative;
+
+      ul {
+        display: flex;
+        flex-flow: row;
+        margin: 0;
+        padding: 1em;
+        min-height: 0;
+        width: auto;
+      }
+    }
+  }
+}

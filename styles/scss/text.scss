@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+html {
+  color: $mainBlack;
+  font-family: 'Source Sans Pro', sans-serif !important;
+  font-weight: $bold;
+}
+
+body {
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+  font-size: 2em;
+}
+
+h1 {
+  color: $mainBlue;
+  font-size: 1.87em;
+  font-weight: $semiBold;
+}
+
+h2 {
+  color: $mainYellow;
+  font-size: 1.75em;
+  font-weight: $semiBold;
+}
+
+h3 {
+  color: $secondBlue;
+  font-size: 1.66em;
+  font-weight: $semiBold;
+}
+
+h4 {
+  color: $secondOrange;
+  font-size: 1.54em;
+  font-weight: $semiBold;
+}
+
+h5 {
+  color: $mainPurple;
+  font-size: 1.33em;
+  font-weight: $bold;
+}
+
+h5 {
+  color: $secondPink;
+  font-size: 1.2em;
+}
+
+a {
+  color: $mainBlue;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: $secondBlue;
+}
+
+figure.anicare_subthemes {
+  figcaption {
+	  opacity: 1;
+  }
+}
+
