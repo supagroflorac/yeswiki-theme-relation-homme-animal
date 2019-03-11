@@ -19,7 +19,7 @@ header {
   justify-content: center;
   background-color: $mainBlue;
   min-height: $textMinHeight;
- 
+
   #logoLink {
     width: 320px;
   }
@@ -29,7 +29,7 @@ header {
     height: auto;
     width: 100%;
   }
-  
+
   #headerColloque {
     display: flex;
     flex-flow: column;
@@ -39,26 +39,30 @@ header {
 
     h1 {
       color: $mainYellow;
+      font-size: 2.5em;
     }
 
     h2 {
       color: white;
+      font-size: 1.5em;
     }
 
     p {
       color: white;
+      font-size: 1em;
     }
 
     a {
-      font-size: 2em;
+      font-size: 1.5em;
       background: $mainYellow;
       box-shadow: 5px 5px 5px 0px $mainBlack;
       color: $mainBlue;
       padding: 0.5em;
-      margin-top: 1em;
+      margin: 1em auto 0 auto;
       text-align: center;
       text-decoration: none;
       transition: transform .5s;
+      width: 50%;
     }
 
     a:hover {
@@ -78,7 +82,7 @@ header {
     //min-height: $textMinHeight;
   }
 }
-  
+
 footer {
   background-color: $mainBlue;
   color: white;
@@ -112,6 +116,11 @@ footer {
 @media(max-width: 992px) {
   #headerColloque {
     text-align: center;
+
+    a {
+      width: 90%;
+    }
+
   }
 }
 
