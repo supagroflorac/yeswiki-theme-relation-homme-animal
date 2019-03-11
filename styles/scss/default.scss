@@ -79,7 +79,9 @@ header {
     max-width: $textWidth;
     margin: auto;
     padding: 1em 0;
-    //min-height: $textMinHeight;
+    iframe {
+      border: 0;
+    }
   }
 }
 
