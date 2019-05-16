@@ -32,11 +32,16 @@
     color: $mainBlack;
     font-size: 1em;
     font-weight: bold;
+    min-height: 5em !important;
 
     .span6 {
-      img {
-        max-width: 360px;
-        height: auto;
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
+      iframe.center {
+        text-align: center;
+        margin: auto;
       }
     }
   }
