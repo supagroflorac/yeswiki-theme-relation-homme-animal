@@ -74,6 +74,12 @@ header {
   }
 }
 
+#full {
+  width: 20em;
+  height: auto;
+  margin: auto;
+}
+
 #main {
   div.page {
     max-width: $textWidth;

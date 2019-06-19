@@ -105,6 +105,11 @@ header {
     header #headerColloque a:hover {
       transform: scale(1.1); }
 
+#full {
+  width: 20em;
+  height: auto;
+  margin: auto; }
+
 #main div.page {
   max-width: 40em;
   margin: auto;
